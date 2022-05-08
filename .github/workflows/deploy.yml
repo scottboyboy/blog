@@ -9,7 +9,7 @@ env:
   GIT_USER: scottboyboy
   GIT_EMAIL: wjwnb@qq.com
   THEME_REPO: scottboyboy/blog
-  THEME_BRANCH: master
+  THEME_BRANCH: main
   DEPLOY_REPO: scottboyboy/scottboyboy.github.io
   DEPLOY_BRANCH: master
 
@@ -26,12 +26,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Checkout theme repo
-        uses: actions/checkout@v2
-        with:
-          repository: ${{ env.THEME_REPO }}
-          ref: ${{ env.THEME_BRANCH }}
-          path: themes/concise
+      # - name: Checkout theme repo
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: ${{ env.THEME_REPO }}
+      #     ref: ${{ env.THEME_BRANCH }}
+      #     path: themes/concise
 
       - name: Checkout deploy repo
         uses: actions/checkout@v2
